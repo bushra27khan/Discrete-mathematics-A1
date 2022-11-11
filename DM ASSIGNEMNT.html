@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ASSIGNMENT 1</title>
+    <script>
+        var V = 4; 
+function transitiveClosure() {
+  var reach = Array.from(Array(V), () => new Array(V));
+  var i, j, k;
+  for (i = 0; i < V; i++)
+  {
+    for (j = 0; j < V; j++);
+  {
+  for (k = 0; k < V; k++) 
+  {
+    for (i = 0; i < V; i++)
+    {
+      for (j = 0; j < V; j++) 
+      {
+        reach[i][j] = reach[i][j] != 0 || (reach[i][k] != 0 && reach[k][j] != 0);
+      }
+    }
+  }
+  }
+  }
+  printSolution(reach);
+}
+function printSolution(reach) {
+  prompt ("Following matrix is transitive" + " closure of the given graph ");
+  for (var i = 0; i < V; i++) {
+          for (var j = 0; j < V; j++) {
+            if (i == j) {console.log(" ");}
+            else {console.log(reach[i][j] + " ");}
+          }
+          
+        }
+      }
+     
+
+  
+
+    </script>
+</head>
+<body>
+    <input ID="text1"placeholder="enter matrix">
+    <br>
+    <form>
+      <input type = "button" value = "Click me" onclick = "transitiveClosure()" />
+      </form>
+</body>
+</html>
